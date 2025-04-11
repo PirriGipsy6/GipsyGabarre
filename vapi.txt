@@ -1,0 +1,19 @@
+
+scrip_vapi
+<!-- Script para insertar el asistente de Vapi utilizando su ID -->
+<script>
+  (function() {
+    const script = document.createElement("script");
+    script.src = "https://cdn.vapi.ai/widget/vapi-widget.min.js";
+    script.async = true;
+    script.onload = function () {
+      VapiWidget.init({
+        assistantId: "f9cbf4f3-c547-41e0-98f9-d1059172db25", // Reemplaza con tu ID de asistente
+        position: "bottom-right",                // Puedes cambiar a "bottom-left" si lo deseas
+        welcomeMessage: "Hola, ¿cómo puedo ayudarte?",
+        themeColor: "#2563EB"                    // Color personalizable del widget
+      });
+    };
+    document.head.appendChild(script);
+  })();
+</script>
